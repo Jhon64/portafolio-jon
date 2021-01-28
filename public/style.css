@@ -1,4 +1,21 @@
 .list-options-active {
-   transform: translateY(0rem) !important;
+    transform: translateY(0rem) !important;
     transition: .5s;
+}
+
+.card {
+    padding: 1.3rem 1.5rem;
+    background-color: white;
+    margin: .9rem .3rem;
+}
+.card-header{
+    padding: .5rem 0;
+}
+.card-footer{}
+.card-body{
+   
+}
+
+body {
+    font-size: 14px;
 }

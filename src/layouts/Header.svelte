@@ -55,13 +55,13 @@
   }
 
   .list-options-nav li a {
-    padding: 4px;
+    padding: 6px 4px;
     text-decoration: none;
   }
 
   .list-options-nav li {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 5px 10px;
+    background-color: rgb(0, 0, 0, 0.9);
+    padding: 6px 10px;
     list-style: none;
     text-align: center;
     border: none;
