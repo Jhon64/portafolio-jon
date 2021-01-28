@@ -1,14 +1,14 @@
 <script>
-  export let name;
+  import Header from "./layouts/Header.svelte";
+  import Main from "./layouts/Main.svelte";
+  import Footer from "./layouts/Footer.svelte";
 </script>
 
-<main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
-</main>
+<Header />
+<div class="pt-20 h-full">
+  <Main />
+</div>
+<Footer />
 
 <style global>
   @tailwind base;
