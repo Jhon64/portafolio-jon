@@ -1,14 +1,22 @@
 <script>
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    let input_checked = document.getElementById("icon_menu");
+    let checked = input_checked.checked;
+    isChecked(checked);
+  });
+
   function checked(event) {
     let checked = event.target.checked;
+    isChecked(checked);
+  }
+  function isChecked(checked) {
+    console.log(checked);
     let menuOpcion = document.getElementById("list-options");
-
-    if (checked) {
-      menuOpcion.classList.add("list-options-active");
-    } else {
-      menuOpcion.classList.remove("list-options-active");
-    }
-    console.log(menuOpcion);
+    checked
+      ? menuOpcion.classList.add("list-options-active")
+      : menuOpcion.classList.remove("list-options-active");
   }
 </script>
 
@@ -64,8 +72,8 @@
     font-family: cursive;
     font-weight: lighter;
     width: 100%;
-    transform: traslateY(0);
-    transition: 0.7s;
+    transform: translateY(-14rem);
+    transition: 0.5s;
   }
 
   .none {

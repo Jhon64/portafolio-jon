@@ -5,11 +5,11 @@
 </script>
 
 <Header />
-<div class="pt-20 h-full">
+<div class="pt-10 sm:pt-20 h-full">
   <Main />
 </div>
-<Footer />
 
+<!--<Footer />-->
 <style global>
   @tailwind base;
   @tailwind components;

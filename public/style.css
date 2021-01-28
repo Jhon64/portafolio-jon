@@ -1,4 +1,4 @@
 .list-options-active {
-    transform: translateY(-14rem);
-    transition: .7s;
+   transform: translateY(0rem) !important;
+    transition: .5s;
 }
