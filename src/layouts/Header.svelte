@@ -32,18 +32,18 @@
   <div id="list-options" class=" fixed top-0 mt-10  list-options px-5">
     <!--opciones de la navegacion-->
     <ul class="list-options-nav">
-      <li><a>Home </a></li>
-      <li><a>Featured </a></li>
-      <li><a>Recent Projects </a></li>
-      <li><a>Presentation </a></li>
-      <li><a>Contact </a></li>
+      <li><a href="/">Home </a></li>
+      <li><a href="/">Featured </a></li>
+      <li><a href="/">Recent Projects </a></li>
+      <li><a href="/">Presentation </a></li>
+      <li><a href="/">Contact </a></li>
     </ul>
   </div>
 </header>
 
 <style>
   .nav {
-    z-index: 10;
+    z-index: 20;
   }
   .icon-menu {
     margin-left: 4rem;
@@ -74,6 +74,7 @@
     width: 100%;
     transform: translateY(-14rem);
     transition: 0.5s;
+    z-index: 10;
   }
 
   .none {

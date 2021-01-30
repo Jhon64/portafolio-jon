@@ -2,7 +2,9 @@
     transform: translateY(0rem) !important;
     transition: .5s;
 }
-
+.slide-dot-active {
+    background-color: #585858 !important;
+}
 .card {
     padding: 1.3rem 1.5rem;
     background-color: white;
