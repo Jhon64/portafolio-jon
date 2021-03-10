@@ -1,32 +1,40 @@
 <div class="main p-2">
-    <div class="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-3">
-        <div class="slide">
-            <div class="slideshow-container">
-                <div class="slide-item fade">
-                    <div class="slide-number-text">1/3</div>
-                    <img src="images/img/1.jpg" class="slide-img">
-                    <div class="slide-text">Caption Text</div>
+    <div id="home">
+        <div class="grid grid-cols-1 ">
+            <div class="slide">
+                <div class="slideshow-container">
+                    <div class="slide-item fade">
+                        <div class="slide-number-text">1/3</div>
+                        <img src="images/img/1.jpg" class="slide-img">
+                        <div class="slide-text">Caption Text</div>
+                    </div>
+                    <div class="slide-item fade">
+                        <div class="slide-number-text">2/3</div>
+                        <img class="slide-img" src="images/img/2.jpg">
+                        <div class="slide-text">Caption Two Text</div>
+                    </div>
+                    <div class="slide-item fade">
+                        <div class="slide-number-text">3/3</div>
+                        <img class="slide-img" src="images/img/3.jpg" alt="images">
+                        <div class="slide-text">Caption Three Text</div>
+                    </div>
+                    <a class="slide-prev" href="/" on:click={()=>plusSlides(-1)}>&#10094;</a>
+                    <a class="slide-next" href="/" on:click={()=>plusSlides(1)}>&#10095;</a>
                 </div>
-                <div class="slide-item fade">
-                    <div class="slide-number-text">2/3</div>
-                    <img class="slide-img" src="images/img/2.jpg">
-                    <div class="slide-text">Caption Two Text</div>
+                <div class="slide-circulos">
+                    <span class="dot" on:click={()=>currentSlide(1)}></span>
+                    <span class="dot" on:click={()=>currentSlide(2)}></span>
+                    <span class="dot" on:click={()=>currentSlide(3)}></span>
                 </div>
-                <div class="slide-item fade">
-                    <div class="slide-number-text">3/3</div>
-                    <img class="slide-img" src="images/img/3.jpg" alt="images">
-                    <div class="slide-text">Caption Three Text</div>
-                </div>
-                <a class="slide-prev" href="javascript:0" on:click={()=>plusSlides(-1)}>&#10094;</a>
-                <a class="slide-next"  href="javascript:0" on:click={()=>plusSlides(1)}>&#10095;</a>
-            </div>
-            <div class="slide-circulos">
-                <span class="dot" on:click={()=>currentSlide(1)}></span>
-                <span class="dot" on:click={()=>currentSlide(2)}></span>
-                <span class="dot" on:click={()=>currentSlide(3)}></span>
             </div>
         </div>
     </div>
+    <div id="featured" class="featured"></div>
+    <div id="recent" class="recent"></div>
+    <div id="presentation" class="presentation"></div>
+    <div id="blog" class="blog"></div>
+    <div id="contact" class="contact"></div>
+
 </div>
 
 <script>
@@ -39,7 +47,7 @@
 
     //circulo control
     function currentSlide(number) {
-        showSlides( slideIndex=number);
+        showSlides(slideIndex = number);
 
     }
 
@@ -55,19 +63,40 @@
         let circulos = document.getElementsByClassName("dot")
         number > slides.length ? slideIndex = 1 : 0
         number < 1 ? slideIndex = slides.length : 0
-        for (i=0;i<slides.length;i++){
-            slides[i].style.display="none"
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"
         }
-        for (i=0;i<circulos.length;i++){
+        for (i = 0; i < circulos.length; i++) {
             circulos[i].classList.remove("slide-dot-active")
         }
-        slides[slideIndex-1].style.display="block";
-        circulos[slideIndex-1].classList.add("slide-dot-active")
+        slides[slideIndex - 1].style.display = "block";
+        circulos[slideIndex - 1].classList.add("slide-dot-active")
 
     }
 </script>
 
 <style>
+    .featured{
+        background-color: lightseagreen;
+        height: 500px;
+    }
+    .recent{
+        background-color: #6d7776;
+        height: 500px;
+    }
+    .presentation{
+        background-color: #ba3796;
+        height: 500px;
+    }
+    .blog{
+        background-color: #2045b2;
+        height: 500px;
+    }
+    .contact{
+        background-color: #38ba14;
+        height: 500px;
+    }
+
     .slide-item {
         background-color: rgba(176, 176, 2, 0.3);
         display: none;
@@ -83,7 +112,7 @@
 
     .slide-img {
         width: 100%;
-        height: 200px;
+        height: 300px;
     }
 
     .slide {
@@ -134,16 +163,18 @@
         left: 0;
         color: #f4f4f4;
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .slide-circulos {
+        margin-top: 100px;
         text-align: center;
     }
 
     .slide-circulos .dot {
         background-color: #bbbbbb;
         margin: 2px;
+
         text-align: center;
         height: 15px;
         width: 15px;

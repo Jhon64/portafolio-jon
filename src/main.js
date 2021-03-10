@@ -1,10 +1,7 @@
-import App from './App.svelte';
+import Routes from './routes/index.svelte';
 
-const app = new App({
+const app = new Routes({
 	target: document.body,
-	props: {
-		name: 'world'
-	}
 });
 
 export default app;
